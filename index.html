@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head itemscope itemtype="http://schema.org/WebSite">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Description" content="Terminal emulator and Linux environment for Android" />
+    <title itemprop="name">Termux</title>
+    <link rel="stylesheet" href="tesm.css" type="text/css">
+
+
+<style>
+   .blink {
+    animation: blink 1s infinite; /* Параметры анимации */
+   }
+   @keyframes blink {
+    from { opacity: 1; /* Непрозрачный текст */ }
+    to { opacity: 0; /* Прозрачный текст */ }
+   }
+</style>
+
+    <style>
+	html { font-family: Roboto, sans-serif; height: 100%; margin: auto; padding: 0; color: rgb(190, 190, 190); background-color: black; }
+	.page { max-width: 820px; margin: auto; padding: 0 1em; }
+	body { margin-left: auto; margin-right: auto; margin-top: 0; padding: 0; width: 100%; }
+
+	h1 { font-size: 54px; margin: 42px 0; text-align: center;}
+	h1, h2 { line-height: 32px; color: white; }
+
+	p { font-size: 22px; line-height: 1.3em; }
+	strong { color: white; font-weight: normal; }
+	.first { font-weight: bold; }
+	.wiki { text-align: center; }
+
+	img { margin: 18px auto; max-width:100%; height:auto; }
+	img.phone:first-of-type { margin-top: 3em; display: block; }
+	@media only screen and (min-width: 500px) {
+		img.phone:first-of-type { margin-top: 0; margin-bottom: 0; margin-left: 1em; margin-right: 1em; float: right; }
+	}
+	.badges { text-align: center; margin-top: 0; margin-left: auto; margin-right: auto; }
+
+	.fade-out { opacity: 0; transition: opacity 1s; }
+	.fade-in { opacity: 1; transition: opacity 1s; }
+
+	a, a:visited { color: white !important; }
+    </style>
+    <link rel="canonical" href="index.html" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+
+<h1><span class="greeting"></span> <span class="greeting"></span></h1>
+
+
+    <div class="page">
+     <h1><ins style="color:#00FF00">Termux</ins></h1>
+
+<ul class="navigation"> 
+   <!-- Описание ссылок в меню и сами ссылки. -->
+   <li><a href="https://vk.com/termux_hacking" target="_blank">Сообщество — ВКонтакте</a></li>
+
+<ul clss="navigation">
+
+  <li><a href="https://zen.yandex.ru/media/merion_networks/tekstovyi-redaktor-nano-kak-ustanovit-i-ispolzovat-5e3dad43338f3513f5e9cc7e" target=blank">Nano</a></li>
+
+   <li><a href="https://habr.com/ru/post/131433/" target=blank">Nmap</a></li>
+
+   <li><a href="" target=blank">Metasploit Framework</a></li>
+
+   <li><a href="https://mikhail-yudin.ru/blog/android/persistent-termux-access-through-ssh-tunnel" target=blank">OpenSSH</a></li>
+
+   <li><a href="http://127.0.0.1:8080/" target="blank">СМС БОМБЕР</a></li>
+
+     <p>Termux - это android приложения , которое представляет из себя эмулятор терминала с chroot средой Linux , которое напрямую работает без рут доступа телефона так и с рут доступом по требованию.</p>
+
+
+     <div class="badges">
+       <a href="https://play.google.com/store/apps/details?id=com.termux">
+         <img alt="Get it on Google " src="files/google-play-badge.png" width="215" height="83"/></a>
+
+       <a href="https://f-droid.org/repository/browse/?fdid=com.termux">
+         <img alt="Get it on F-Droid" src="files/fdroid.png" width="215" height="83"/></a></div>
+
+     <p class="wiki"><a href="https://wiki.termux.com/wiki/Main_Page">>Прочитайте Вики, чтобы узнать больше</a></p>
+
+
+     <img class="phone" src="files/htop_framed.png" data-sliderimages="files/vim-main_framed.png,files/hello_framed.png,files/weechat-with-keyboard_framed.png" alt="" width="305" height="600"/>
+
+    <p><strong class="first">Файловые команды.</strong>
+
+<h4>ls – список файлов и каталогов</h4>
+<h4>cd dir – сменить директорию на dir</h4>
+<h4>mkdir dir – создать каталог dir</h4>
+<h4>cd – сменить на домашний каталог</h4>
+<h4>pwd – показать текущий каталог</h4>
+<h4>mkdir dir – создать каталог dir</h4>
+<h4>rm file – удалить file</h4>
+<h4>rm -r dir – удалить каталог dir</h4>
+<h4>rm -f file – удалить форсированно file</h4>
+<h4>rm -rf dir – удалить форсированно каталог dir</h4>
+
+<h4>cp file1 file2 – скопировать file1 в file2</h4>
+<h4>cp -r dir1 dir2 – скопировать dir1 в dir2; создаст каталог dir2, если он не существует</h4>
+
+<h4>mv file1 file2 – переименовать или переместить file1 в file2. если file2 существующий каталог — переместить file1 в каталог file2</h4>
+
+<h4>ln -s file link – создать символическую ссылку link к файлу file</h4>
+
+<h4>touch file – создать file</h4>
+
+<h4>cat > file – направить стандартный ввод в file</h4>
+<h4>more file – вывести содержимое file</h4>
+
+<h4>head file – вывести первые 10 строк file</h4>
+
+<h4>tail file – вывести последние 10 строк file</h4>
+
+<p align="center">Инструменты</p>
+
+
+<h2 align="center" style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;"> 1 Nmap</h2>
+
+<p><d>Nmap ("Network Mapper") — это утилита с открытым исходным кодом для исследования сети и проверки безопасности. Многие системные администраторы и администраторы сетей также находят её полезной для таких задач как инвентаризация сети, управления расписанием служб обновлений и мониторинга аптайма хостов или служб. Nmap использует сырые IP пакеты новаторским способом, чтобы определить, какие хосты доступны в сети, какие службы (имя и версия приложений) эти хосты предлагают, какие операционные системы (и версии ОС) там запущены, какие типы фильтров пакетов/файерволов используются и дюжины других характеристик. Она была создана для быстрого сканирования больших сетей, но работает и прекрасно работает в отношении единичных хостов. Nmap запускается на всех популярных операционных системах, а официальные исполнимые пакеты доступны для Linux, Windows и Mac OS X. В дополнении к классической версии Nmap комоандной строки, набор Nmap включает продвинутый графический интерфейс и просмотрщик результатов (Zenmap), гибкий инструмент передачи, перенаправления и отладки данных (Ncat), утилиту для сравнения результатов сканирования (Ndiff), и инструмент генерации пакетов и анализа ответов (Nping). Он был даже показан в двенадцати фильмах, включая Матрицу Перезагрузка, Die Hard 4, Girl With the Dragon Tattoo и Ультиматум борна.</d></p>
+
+<h2 align="center" style="border:3px; border-style:solid; border-color:#228B22; padding: 1em;"> 2 Metasploit</h2>
+
+<p><d>Metasploit Project — проект, посвящённый информационной безопасности. Создан для предоставления информации об уязвимостях, помощи в создании сигнатур для IDS, создания и тестирования эксплойтов. Наиболее известен проект Metasploit Framework — удобная платформа для создания и отладки эксплойтов. Кроме того, проект включает в себя базу опкодов, архив шеллкодов и информацию по исследованиям информационной безопасности.
+
+Metasploit был создан в июле 2003 года. Версия 1.0 была написана на языке Perl и содержала псевдографический интерфейс на базе curses. Автором выступал HD Moore. При работе над второй (2.x) версией к HD Moore присоединился Мэтт Миллер и несколько добровольцев. Третья версия была полностью переписана на Ruby, её разрабатывала компания Metasploit LLC (основанная разработчиками в 2006 году). В 2008 году лицензия Metasploit Framework была сменена с проприетарной на BSD. В 2009 фирма Rapid7, занимающаяся управлением уязвимостями, объявила о приобретении Metasploit, популярного открытого программного пакета двойного назначения для проведения тестов на проникновение. Некоммерческая версия утилиты по-прежнему будет доступна для всех желающих.
+
+Как и коммерческие аналоги, бесплатная версия Metasploit может быть использована как системными администраторами и специалистами по безопасности для защиты компьютерных систем, так и хакерами-взломщиками или скрипткиддиc для получения несанкционированного доступа к удаленным системам.</d></p>
+
+
+<h2 align="center" style="border:3px; border-style:solid; border-color:#FF4500; padding: 1em;"> 3 Nano</h2>
+
+<p><d>Nano — консольный текстовый редактор для UNIX и Unix-подобных операционных систем, основанный на библиотеке curses и распространяемый под лицензией GNU GPL. Это свободный клон текстового редактора Pico, входившего в состав e-mail клиента Pine. nano был создан, чтобы повторить функциональность и удобство интерфейса Pico, но без глубокой интеграции в почтовый клиент, присущей пакету Pine/Pico</d></p>
+
+
+<h2 align="center" style="border:3px; border-style:solid; border-color:#0000FF; padding: 1em;"> 4 OpenSSH </h2>
+
+
+<p><d>OpenSSH (англ. Open Secure Shell — открытая безопасная оболочка) — набор программ, предоставляющих шифрование сеансов связи по компьютерным сетям с использованием протокола SSH. Он был создан под руководством Тео де Раадта как открытая альтернатива проприетарного ПО от SSH Communications Security.</d></p>
+
+<!-- RedHelper -->
+<script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async" 
+  src="https://web.redhelper.ru/service/main.js?c=vano1718">
+</script> 
+<!--/Redhelper -->
+
+
+     <div class="badges">
+       <a href="https://play.google.com/store/apps/details?id=com.termux">
+         <img alt="Get it on Google Play" src="files/google-play-badge.png" width="215" height="83"/></a>
+       <a href="https://f-droid.org/repository/browse/?fdid=com.termux">
+         <img alt="F-Droid" src="files/fdroid.png" width="250" height="83"/></a></div>
+
+
+<marquee behavior="alternate" bgcolor="#e20b0b" direction="right" style="color: #ffffff; font-size: 20px; font-weight: bolder; line-height: 150%; text-shadow: #000000 0px 1px 1px;"onmousedown="this.stop()" onmouseup="this.start()">Не судите строго</marquee>
+
+
+    </div>
+    <script src="files/slider.js"></script>
+  </body>
+</html>
+
